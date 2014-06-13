@@ -2,7 +2,7 @@
 
 Name: oxygen-fonts
 Version: 0.3.96
-Release: 1
+Release: 2
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: The Oxygen font set
 URL: http://kde.org/
