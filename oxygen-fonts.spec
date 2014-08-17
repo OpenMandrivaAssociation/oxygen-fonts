@@ -1,9 +1,9 @@
 %define debug_package %{nil}
 
 Name: oxygen-fonts
-Version: 0.4.0
+Version: 0.4.0.1
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/plasma/5.0.0/%{name}-%{version}.tar.xz
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/plasma/5.0.1/%{name}-%{version}.tar.xz
 Summary: The Oxygen font set
 URL: http://kde.org/
 License: OFL 1.1/GPLv3+FE
