@@ -1,9 +1,10 @@
 %define debug_package %{nil}
+%define major %(echo %{version} |cut -d. -f1-3)
 
 Name: oxygen-fonts
-Version: 5.0.95
+Version: 5.1.0.1
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/plasma/%{version}/%{name}-%{version}.tar.xz
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/plasma/%{major}/%{name}-%{version}.tar.xz
 Summary: The Oxygen font set
 URL: http://kde.org/
 License: OFL 1.1/GPLv3+FE
@@ -30,7 +31,7 @@ Requires: %{name} = %{EVRD}
 Development files for locating the Oxygen font set
 
 %prep
-%setup -q
+%setup -qn %{name}-%{major}
 %cmake -G Ninja
 
 %build
