@@ -4,7 +4,7 @@
 
 Name: oxygen-fonts
 Version: 5.3.2
-Release: 1
+Release: 2
 Source0: http://download.kde.org/%{stable}/plasma/%{major}/%{name}-%{version}.tar.xz
 Summary: The Oxygen font set
 URL: http://kde.org/
