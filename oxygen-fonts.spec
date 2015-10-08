@@ -3,8 +3,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: oxygen-fonts
-Version: 5.4.1
-Release: 2
+Version: 5.4.2
+Release: 1
 Source0: http://download.kde.org/%{stable}/plasma/%{major}/%{name}-%{version}.tar.xz
 Summary: The Oxygen font set
 URL: http://kde.org/
