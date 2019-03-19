@@ -2,10 +2,15 @@
 %define major %(echo %{version} |cut -d. -f1-3)
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
+# We're releasing from git because the font set seems to have been abandoned
+# (no more releases after Plasma 5.4), but it still gets a few fixes on git
+# (last commit 3 years after last release).
+%define date 20190319
+
 Name: oxygen-fonts
-Version: 5.4.3
-Release: 4
-Source0: http://download.kde.org/%{stable}/plasma/%{major}/%{name}-%{version}.tar.xz
+Version: 5.4.4
+Release: 0.%{date}.1
+Source0: https://github.com/KDE/oxygen-fonts/archive/master.tar.gz
 Summary: The Oxygen font set
 URL: http://kde.org/
 License: OFL 1.1/GPLv3+FE
@@ -28,7 +33,7 @@ Requires: %{name} = %{EVRD}
 Development files for locating the Oxygen font set.
 
 %prep
-%autosetup -n %{name}-%{major} -p1
+%autosetup -n %{name}-master -p1
 %cmake_kde5
 
 %build
@@ -39,6 +44,7 @@ Development files for locating the Oxygen font set.
 
 %files
 %{_datadir}/fonts/truetype/oxygen
+%{_datadir}/metainfo/org.kde.oxygen-fonts.metainfo.xml
 
 %files devel
 %{_libdir}/cmake/OxygenFont
