@@ -12,7 +12,7 @@ Version: 5.4.4
 Release: 0.%{date}.1
 Source0: https://github.com/KDE/oxygen-fonts/archive/master.tar.gz
 Summary: The Oxygen font set
-URL: http://kde.org/
+URL: https://kde.org/
 License: OFL 1.1/GPLv3+FE
 Group: System/Libraries
 BuildRequires: pkgconfig(Qt5Core)
